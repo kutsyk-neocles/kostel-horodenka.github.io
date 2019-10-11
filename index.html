@@ -108,8 +108,19 @@
         <div class="row" style="height: 30vh;">
             Реконструкція
         </div>
-        <div class="row" style="height: 30vh;">
-            Контакти
+        <div class="row">
+            <h1> Контакти</h1>
+        </div>
+        <div class="row py-4">
+            <div class="col s6">
+                <h4 class="mt-0">Церква Непорочного Зачаття Пресвятої Богородиці</h4>
+                <p> вул. Володимира Великого 1,
+                    Городенка, Івано-Франківська область, Україна, 78100,
+                </p>
+            </div>
+            <div class="col s6">
+                <div id="map" style="box-shadow: 36px 18px;"></div>
+            </div>
         </div>
     </div>
     <!-- /.container -->
@@ -152,7 +163,20 @@
             $('.sidenav').sidenav();
         });
 
+        function initMap() {
+            // The location of Uluru
+            var uluru = { lat: 48.6708093, lng: 25.5071675 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 15, center: uluru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: uluru, map: map });
+        }
+
     </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4w6CZdSSPKJuqFUBAj9F7jRlWhtpiX9I&callback=initMap">
+        </script>
 </body>
 
 

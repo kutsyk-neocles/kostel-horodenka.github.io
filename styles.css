@@ -49,3 +49,8 @@ nav a.sidenav-trigger i {
 .pt-50p {
   padding-top: 50%;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+.black {
+  color: #000000;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.navb-custom {
+    background-color: rgba(255,255,255,0.76);
+    border-bottom: 1pt black solid;
+}
+
+.transitional {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }

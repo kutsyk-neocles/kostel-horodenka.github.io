@@ -4,6 +4,9 @@
 <head>
     <title>Костел</title>
     <link rel="stylesheet" href="/styles.css">
+    <link href="/fontawesome/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -18,35 +21,76 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top navb-custom transitional" id="navbar" style="padding: 24px 8px;">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg sticky-top navb-custom transitional">
+        <div class="container" id="navbar">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target=".navbar-collapse">
                 ☰
             </button>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                    <li class="nav-item" style="font-size: 1.3em;">
+                        <a class="nav-link" href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                    <li class="nav-item" style="font-size: 1.3em;">
+                        <a class="nav-link" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
-            <a class="navbar-brand mx-auto" href="#">
-                <img src="/assets/imgs/logo.svg" alt="">
-            </a>
+            <div class="mx-auto ">
+                <ul class="nav navbar-nav ml-auto">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item navlink">
+                                <a class="nav-link" href="#">Головна</a>
+                            </li>
+                            <li class="nav-item navlink">
+                                <a class="nav-link" href="#">Історія</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="navbar-brand mr-0 navlink" href="#">
+                        <img src="/assets/imgs/logo.svg" alt="">
+                    </a>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item navlink">
+                                <a class="nav-link" href="#">Реконструкція</a>
+                            </li>
+                            <li class="nav-item navlink">
+                                <a class="nav-link" href="#">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">
+                            <button class="btn btn-circle">
+                                UA
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <button class="btn btn-circle">
+                                EN
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <button class="btn btn-circle">
+                                PL
+                            </button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -127,7 +171,18 @@
 
         </div>
         <!-- /.row -->
-
+        <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+            <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b>
+            </p>
+            <p>Scroll down this frame to see the effect!</p>
+            <p>Scroll to the top to remove the effect.</p>
+            <p><b>Note:</b> We have also made the navbar responsive, resize the browser window to see the effect.</p>
+            <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
     </div>
     <!-- /.container -->
 
@@ -141,16 +196,15 @@
 
     <!-- Bootstrap core JavaScript -->
     <script>
-        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-        window.onscroll = function () { scrollFunction() };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-                document.getElementById("navbar").style.padding = "0";
+
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('nav').addClass('shrink');
             } else {
-                document.getElementById("navbar").style.padding = "24px 8px";
+                $('nav').removeClass('shrink');
             }
-        }
+        });
     </script>
 </body>
 

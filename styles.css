@@ -7,13 +7,46 @@
 }
 
 .navb-custom {
-    background-color: rgba(255,255,255,0.76);
-    border-bottom: 1pt black solid;
+  background-color: rgba(255, 255, 255, 0.76);
+  border-bottom: 1pt black solid;
 }
 
 .transitional {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navlink {
+  text-align: center;
+  width: 120px;
+}
+
+nav.navbar {
+  padding: 24px 8px;
+}
+
+nav.navbar.shrink {
+  padding: 0;
+}
+
+nav.navbar a {
+  color: black;
+}
+
+nav.navbar a:hover {
+  text-decoration: underline;
+}
+
+.btn-circle {
+  border-radius: 2em !important;
+  border: 1pt solid black !important;
+  background-color: transparent !important;
+  color: black !important;
+  padding: 6px 8px !important;
+}
+
+.btn-circle:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}

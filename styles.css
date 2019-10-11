@@ -5,7 +5,7 @@
 .bg-black {
   background-color: #000000;
 }
-
+/* 
 .navb-custom {
   background-color: rgba(255, 255, 255, 0.76);
   border-bottom: 1pt black solid;
@@ -49,4 +49,31 @@ nav.navbar a:hover {
 
 .btn-circle:hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
+} */
+
+.btn-circle {
+  border: 1pt solid black !important;
+  background-color: transparent !important;
+  color: black !important;
+  text-align: center;
+}
+.btn-circle:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+nav,
+nav .nav-wrapper i,
+nav a.sidenav-trigger,
+nav a.sidenav-trigger i {
+  height: 100px !important;
+}
+
+.nav-wrapper {
+  background-color: white;
+  color: black;
+}
+
+.nav-wrapper .brand-logo,
+.nav-wrapper a {
+  color: black;
 }

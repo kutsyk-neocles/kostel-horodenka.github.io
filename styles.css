@@ -1,9 +1,26 @@
 .black {
-  color: #000000;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .bg-black {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+footer {
+  height: auto;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-white a {
+  color: white !important;
 }
 
 nav,
@@ -15,12 +32,12 @@ nav a.sidenav-trigger i {
 
 .nav-wrapper {
   background-color: white;
-  color: black;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .nav-wrapper .brand-logo,
 .nav-wrapper a {
-  color: black;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .nav-center {

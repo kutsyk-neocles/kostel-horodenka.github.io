@@ -8378,11 +8378,22 @@ input[type=range]::-ms-thumb {
 
 .carousel.carousel-slider .carousel-fixed-item-top-left {
   position: absolute;
-  top: 5em;
-  left: 7em;
+  top: 10%;
+  left: 15%;
   text-align: left;
   bottom: none;
   z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel.carousel-slider .carousel-fixed-item-top-left {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    text-align: left;
+    bottom: none;
+    z-index: 1;
+  }
 }
 
 .carousel.carousel-slider .carousel-fixed-item {

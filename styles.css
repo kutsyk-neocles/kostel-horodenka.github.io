@@ -54,3 +54,35 @@ nav a.sidenav-trigger i {
   height: 400px;
   width: 100%;
 }
+
+
+.img-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.img-container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.img-container .btn:hover {
+  background-color: black;
+}

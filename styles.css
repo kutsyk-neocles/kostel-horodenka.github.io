@@ -68,3 +68,13 @@ nav a.sidenav-trigger i {
 .btn-round.active {
   background-color: rgba(0, 0, 0, 0.2);
 }
+
+.history-block {
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: white;
+}
+
+.text-right {
+  text-align: right;
+}

@@ -190,7 +190,7 @@
                     >
                   </span>
                   <br />
-                  Підго
+                  Збір коштів
                 </p>
                 <p>
                   Long bois mlem I am bekom fat wrinkler puggo maximum borkdrive
@@ -253,6 +253,15 @@
     ></script>
     <!-- Bootstrap core JavaScript -->
     <script>
+      $(document).ready(function() {
+        $(".sidenav").sidenav();
+
+        $(".carousel.carousel-slider").carousel({
+          fullWidth: true,
+          indicators: true
+        });
+      });
+      
       function includeHTML() {
         var z, i, elmnt, file, xhttp;
         /* Loop through a collection of all HTML elements: */
@@ -285,14 +294,6 @@
         }
       }
 
-      $(document).ready(function() {
-        $(".sidenav").sidenav();
-
-        $(".carousel.carousel-slider").carousel({
-          fullWidth: true,
-          indicators: true
-        });
-      });
       includeHTML();
       function initMap() {
         // The location of Uluru

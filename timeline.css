@@ -6,8 +6,8 @@ main {
   font-size: 1em;
   line-height: 1.75em;
   border-top: 3px solid;
-  -o-border-image: linear-gradient(to right, #616161 0%, #00E676 100%);
-  border-image: linear-gradient(to right, #616161 0%, #00E676 100%);
+  -o-border-image: linear-gradient(to right, #616161 0%, #ECEFF1 100%);
+  border-image: linear-gradient(to right, #616161 0%, #ECEFF1 100%);
   border-image-slice: 1;
   border-width: 3px;
   margin: 0;

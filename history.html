@@ -663,7 +663,25 @@
         $(document).ready(function() {
           $(".sidenav").sidenav();
           $(".pushpin").pushpin();
-          // $(".scrollspy").scrollSpy({options: {scrollOffset: 120}});
+          // $(".scrollspy").scrollSpy();
+
+          let stickyTop = 0,
+            scrollTarget = false;
+          let staticShift = 60;
+
+          let timeline = $(".history-nav"),
+            items = $("li", timeline),
+            offsetTop = parseInt(timeline.css("top"));
+
+          timeline.css("top", "60px");
+
+          $(window)
+            .scroll(function() {
+              let active = $(".history-nav .active")[0];
+              let shift = staticShift - (active.offsetTop - staticShift);
+              timeline.css("top", shift + "px");
+            })
+            .trigger("scroll");
         });
 
         var z, i, elmnt, file, xhttp;

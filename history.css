@@ -38,3 +38,12 @@
   border-bottom: 1px dotted transparent;
   color: #f94125;
 }
+
+.history-container {
+  position: fixed;
+  top: 120px;
+  left: 35%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}

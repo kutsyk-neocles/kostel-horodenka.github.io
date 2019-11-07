@@ -47,3 +47,11 @@
   width: 100%;
   z-index: -1;
 }
+
+.drop-cap::first-letter {
+  -webkit-initial-letter: 4;
+          initial-letter: 4;
+  font-weight: bold;
+  font-size: 2em;
+  font-family: serif;
+}

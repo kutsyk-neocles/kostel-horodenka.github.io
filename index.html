@@ -79,7 +79,7 @@
     <div class="row">
       <div class="carousel carousel-slider center">
         <div class="carousel-item white-text">
-          <img src="/assets/imgs/kostel_main.png" alt="..." />
+          <img src="/assets/imgs/kostel_main.png" class="slide-img" alt="..." />
           <div class="carousel-fixed-item-top-left center text-dark">
             <p>
               <span style="font-size: 2rem;"
@@ -91,17 +91,43 @@
               >
             </p>
             <p>
-              <a class="btn-round">більше</a>
+              <a class="btn-round" href="https://www.facebook.com/groups/1564845863800226/" target="_blank">більше</a>
             </p>
           </div>
         </div>
-        <div class="carousel-item amber white-text">
-          <h2>Історія</h2>
-          <p class="white-text">перехід на історію в картинках</p>
+        <div class="carousel-item white-text">
+          <img src="/assets/imgs/slide_history.jpg" class="slide-img" alt="..." />
+          <div class="carousel-fixed-item-top-left center text-dark">
+            <p>
+              <span style="font-size: 2rem;"
+                ><strong>Історія</strong></span
+              >
+              <br />
+              <span class="hide-on-small-only">
+                Перевірь наскільки добре ти знаєш свою історію та знайди ще.
+              </span>
+            </p>
+            <p>
+              <a class="btn-round" href="/history.html">більше</a>
+            </p>
+          </div>
         </div>
-        <div class="carousel-item green white-text">
-          <h2>Проект</h2>
-          <p class="white-text">Концепт, ідея та команда</p>
+        <div class="carousel-item white-text">
+          <img src="/assets/imgs/slider3.jpg" class="slide-img" alt="..." />
+          <div class="carousel-fixed-item-top-left center text-dark">
+            <p>
+              <span style="font-size: 2rem;"
+                ><strong>Проект</strong></span
+              >
+              <br />
+              <span class="hide-on-small-only">
+                Ідея. Засновники. Цілі.
+              </span>
+            </p>
+            <p>
+              <a class="btn-round" href="/project.html">більше</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -258,6 +284,10 @@
               вул. Володимира Великого 1
               <br />
               м. Городенка, 78100, Івано-Франківська область, Україна
+              <h5>Адміністрація</h5>
+              <i class="fas fa-user"></i> Отець Ігор Ковбасюк
+              <br />
+              <i class="fas fa-phone"></i> +(38)096-11-92-802
             </p>
           </div>
           <div class="col s12 m6">
@@ -276,16 +306,7 @@
     <!-- Bootstrap core JavaScript -->
     <script>
       function includeHTML() {
-        $(document).ready(function() {
-          $(".sidenav").sidenav();
-
-          $(".carousel.carousel-slider").carousel({
-            fullWidth: true,
-            indicators: true
-          });
-        });
-
-        var z, i, elmnt, file, xhttp;
+            var z, i, elmnt, file, xhttp;
         /* Loop through a collection of all HTML elements: */
         z = document.getElementsByTagName("*");
         for (i = 0; i < z.length; i++) {
@@ -311,12 +332,20 @@
             xhttp.open("GET", file, true);
             xhttp.send();
             /* Exit the function: */
+          $(".sidenav").sidenav();
+
             return;
           }
         }
       }
-
-      includeHTML();
+      $(document).ready(function() {
+          includeHTML();
+          $(".carousel.carousel-slider").carousel({
+            fullWidth: true,
+            indicators: true
+          });
+        });
+    
       function initMap() {
         // The location of Uluru
         var uluru = { lat: 48.6708093, lng: 25.5071675 };

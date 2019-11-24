@@ -48,7 +48,7 @@
     />
 
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/history.css" />
+    <link rel="stylesheet" href="/css/hover.css" />
     <link href="/fontawesome/css/all.css" rel="stylesheet" />
     <!--load all styles -->
 
@@ -84,22 +84,93 @@
   <body>
     <div w3-include-html="header.html"></div>
 
-    <div>
-      <img
-        src="/assets/imgs/history-background.svg"
-        alt=""
-        class="history-container"
-      />
-    </div>
-
     <div class="container">
-      <div>
-        <ul id="images">
-        <li><img src="/history photos/20-2.jpg" alt="Picture" class="img-thumbnail"/></li>
-          <li><img src="/history photos/after war.jpg" class="img-thumbnail" /></li>
-          <li><img src="/history photos/another shit.jpg" alt="Picture 2" class="img-thumbnail"/></li>
-          <li><img src="/history photos/army.jpg" alt="Picture 3" class="img-thumbnail"/></li>
-        </ul>
+      <div class="row">
+        <h2>1945</h2>
+        <hr />
+        <div id="images" class="row py-4 text-center">
+          <div class="col s12 m4 l3">
+            <div class="block">
+              <div class="outer-div article-component">
+                <img
+                  src="/history photos/20-2.jpg"
+                  class="responsive-img gallery-tumbnail inner-div"
+                />
+              </div>
+              <div class="block-text col p-1">
+                <span class="block-title">
+                  Назва фото та галереї
+                </span>
+                <br/>
+                <small class="text-muted">
+                  Короткий опис якщо присутній
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m4 l3">
+            <div class="block">
+              <div class="outer-div article-component">
+                <img
+                  src="/history photos/after war.jpg"
+                  class="responsive-img gallery-tumbnail inner-div"
+                />
+              </div>
+              <div class="col p-1 block-text">
+                <span class="block-title">
+                  Назва фото та галереї
+                </span>
+                <br/>
+                <small class="text-muted">
+                  Короткий опис якщо присутній
+                </small>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col s12 m4 l3">
+            <div class="block">
+              <div class="outer-div article-component">
+                <img
+                  src="/history photos/another shit.jpg"
+                  class="responsive-img gallery-tumbnail inner-div"
+                />
+              </div>
+              <div class="col p-1 block-text">
+                <span class="block-title">
+                  Назва фото та галереї
+                </span>
+                <br/>
+                <small class="text-muted">
+                  Короткий опис якщо присутній
+                </small>
+              </div>
+            </div>
+          </div>
+         
+           <div class="col s12 m4 l3">
+            <div class="block">
+              <div class="outer-div article-component">
+                <img
+                  src="/history photos/army.jpg"
+                  class="responsive-img gallery-tumbnail inner-div"
+                />
+              </div>
+              <div class="block-text col p-1">
+                <span class="block-title">
+                  Назва фото та галереї
+                </span>
+                <br/>
+                <small class="text-muted">
+                  Короткий опис якщо присутній
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
       </div>
     </div>
     <!-- /.container -->
@@ -134,23 +205,6 @@
           $(".sidenav").sidenav();
           $(".pushpin").pushpin();
           $(".materialboxed").materialbox();
-          let stickyTop = 0,
-            scrollTarget = false;
-          let staticShift = 60;
-
-          let timeline = $(".history-nav"),
-            items = $("li", timeline),
-            offsetTop = parseInt(timeline.css("top"));
-
-          timeline.css("top", "60px");
-
-          $(window)
-            .scroll(function() {
-              let active = $(".history-nav .active")[0];
-              let shift = staticShift - (active.offsetTop - staticShift);
-              timeline.css("top", shift + "px");
-            })
-            .trigger("scroll");
         });
 
         var z, i, elmnt, file, xhttp;

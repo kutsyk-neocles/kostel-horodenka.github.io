@@ -12,4 +12,3 @@ jobs:
           source_dir: /github/workspace
           container_name: $web
           connection_string: ${{ secrets.ConnectionString }}
-          extra_args: '--pattern *'

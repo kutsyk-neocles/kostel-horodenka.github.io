@@ -82,13 +82,39 @@
   gtag('config', 'UA-155140174-1');
 </script>
 
+<style>
+.right {
+  font-size: 4.2rem; 
+  color: #343a40 !important;
+}
+
+.left {
+  font-size: 4.2rem; 
+  color: #343a40 !important;
+}
+</style>
+
   </head>
 
   <body>
     <div w3-include-html="header.html"></div>
 
     <div class="row">
-      <div class="carousel carousel-slider center">
+
+      <div class="carousel carousel-slider center" data-indicators="true">
+
+      <div class="carousel-fixed-item center middle-indicator">
+          <div class="left">
+            <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
+          </div>
+          
+          <div class="right">
+          <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+          </div>
+          
+          </div>
+
+
         <div class="carousel-item white-text">
           <img src="/assets/imgs/kostel_main.png" class="slide-img" alt="Городенка Костел Непорочного Зачаття 1745р."..." />
           <div class="carousel-fixed-item-top-left center text-dark">
@@ -357,8 +383,29 @@
           includeHTML();
           $(".carousel.carousel-slider").carousel({
             fullWidth: true,
-            indicators: true
+            indicators: true,
+            duration: 700,
+            dist: 0
           });
+
+          setInterval(function () {
+            $(".carousel.carousel-slider").carousel('next');
+          }, 5300);
+
+          // move next carousel
+          $('.moveNextCarousel').click(function(e){
+              e.preventDefault();
+              e.stopPropagation();
+              $('.carousel').carousel('next');
+          });
+
+          // move prev carousel
+          $('.movePrevCarousel').click(function(e){
+              e.preventDefault();
+              e.stopPropagation();
+              $('.carousel').carousel('prev');
+          });
+
         });
     
       function initMap() {

@@ -373,7 +373,9 @@
             xhttp.open("GET", file, true);
             xhttp.send();
             /* Exit the function: */
-          $(".sidenav").sidenav();
+          $(".sidenav").sidenav( {
+            draggable: true
+          });
 
             return;
           }

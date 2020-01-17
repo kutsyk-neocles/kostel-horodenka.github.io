@@ -154,11 +154,15 @@ a.middle-indicator-text {
   height: 60vh !important;
 }
 
-/* 
+
 @media only screen and (max-width: 600px) {
   
 .middle-indicator {
   top: 10%;
 }
 
-} */
+.carousel {
+  height: 150px !important;
+}
+
+}

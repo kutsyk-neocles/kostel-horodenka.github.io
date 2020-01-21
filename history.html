@@ -96,11 +96,14 @@
 
       gtag("config", "UA-155140174-1");
     </script>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- jQuery is required -->
     <script src="/viewer/viewer.js"></script>
     <!-- Viewer.js is required -->
     <link href="/viewer/viewer.css" rel="stylesheet" />
     <script src="/viewer/jquery-viewer.js"></script>
+    <link href="/gallery.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -114,16 +117,16 @@
       />
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col s12 history-text">
+    <div id="images" class="container history-text">
           <div class="row text-center">
             <h2>Історія</h2>
           </div>
+
           <div class="row text-center">
             <a href="lost-history.html">Загублена Історія</a>
           </div>
-          <div class="section scrollspy row">
+
+          <div class="row">
             <div class="col m12">
               <p>
                 <img
@@ -162,6 +165,7 @@
               </p>
             </div>
           </div>
+
           <div class="row">
             <div class="col m12">
               <img
@@ -220,8 +224,7 @@
             </div>
           </div>
 
-          <div class="col s12 m9 l12 history-text">
-            <div class="section scrollspy row">
+            <div class="row">
               <div class="col xl12">
                 <p class="drop-cap text-justify">
                   Неординарна постать фундатора храму вартує певної уваги.
@@ -1217,8 +1220,6 @@
                   class="responsive-img gallery-cursor"
                 />
               </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -1227,7 +1228,6 @@
     <!-- Footer -->
     <div w3-include-html="footer.html"></div>
 
-    <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
     <script src="/materialize/js/materialize.js"></script>
     <script src="/assets/js/lightgallery.js-1.1.3/src/js/lg-utils.js"></script>
     <script src="/assets/js/lightgallery.js-1.1.3/src/js/lightgallery.js"></script>
@@ -1252,35 +1252,11 @@
 
       function includeHTML() {
         document.addEventListener("DOMContentLoaded", function() {});
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     var elems = document.querySelectorAll(".scrollspy");
-        //     var options = {
-        //         scrollOffset: 120
-        //     };
-        //     var instances = M.ScrollSpy.init(elems, options);
-        // });
 
         $(document).ready(function() {
           $(".sidenav").sidenav();
           $(".pushpin").pushpin();
-          $(".materialboxed").materialbox();
-          // let stickyTop = 0,
-          // scrollTarget = false;
-          // let staticShift = 60;
-
-          // let timeline = $(".history-nav"),
-          //     items = $("li", timeline),
-          //     offsetTop = parseInt(timeline.css("top"));
-
-          // timeline.css("top", "60px");
-
-          // $(window)
-          //     .scroll(function() {
-          //         let active = $(".history-nav .active")[0];
-          //         let shift = staticShift - (active.offsetTop - staticShift);
-          //         timeline.css("top", shift + "px");
-          //     })
-          //     .trigger("scroll");
+        //   $(".materialboxed").materialbox();
         });
 
         var z, i, elmnt, file, xhttp;

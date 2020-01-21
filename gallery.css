@@ -1,3 +1,7 @@
+.gallery-cursor {
+    cursor: zoom-in;
+}
+
 .gallery-tumbnail {
     cursor: zoom-in;
     width: 240px;
